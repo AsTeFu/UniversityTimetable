@@ -51,6 +51,9 @@
     "prettier": "2.5.1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --max-warnings=0 --fix",
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
